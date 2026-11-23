@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Girard Lévy — Portfolio BTS SIO SLAM</title>
+<meta name="description" content="Portfolio de Girard Lévy, étudiant en BTS SIO option SLAM (2e année) au Lycée Marie Curie de Tarbes : projets, compétences et stage chez CodeFilao.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="Girard Lévy — Portfolio BTS SIO SLAM">
+<meta property="og:description" content="Projets, compétences et CV d'un étudiant en BTS SIO option SLAM.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236d5bd0'/%3E%3Ctext x='31' y='43' font-family='Arial,sans-serif' font-weight='900' font-style='italic' font-size='30' text-anchor='middle' fill='white'%3EGL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
+<style>
+@property --c{syntax:'<color>';inherits:true;initial-value:#6d5bd0}
+:root{--c:#6d5bd0;--f:clamp(16px,4vw,75px);--mut:rgba(255,255,255,.64);--out:cubic-bezier(.16,1,.3,1);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#000;color:#fff;font-family:"Archivo",Helvetica,Arial,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.disp{font-style:italic;font-weight:900;font-stretch:125%;text-transform:uppercase;letter-spacing:-.02em;line-height:.9}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+/* grain léger : casse les bandes visibles dans les dégradés sombres */
+.grain{position:fixed;inset:0;z-index:40;pointer-events:none;opacity:.05;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+.br{position:fixed;width:9px;height:9px;z-index:5;pointer-events:none;border:0 solid rgba(255,255,255,.55);transition:opacity .4s}
+.end .br.c,.end .br.d{opacity:0}
+.br.a{top:128px;left:var(--f);border-width:1px 0 0 1px}.br.b{top:128px;right:var(--f);border-width:1px 1px 0 0}
+.br.c{bottom:34px;left:var(--f);border-width:0 0 1px 1px}.br.d{bottom:34px;right:var(--f);border-width:0 1px 1px 0}
+.side-l{position:fixed;left:calc(var(--f)/2 - 6px);top:50%;z-index:5;writing-mode:vertical-rl;transform:rotate(180deg) translateY(50%);font-size:11px;letter-spacing:.2em;color:var(--mut);white-space:nowrap}
+.pline{position:fixed;z-index:21;top:calc(env(safe-area-inset-top,0px) + 28px);left:var(--f);right:var(--f);height:1px;background:rgba(255,255,255,.22)}
+.pfill{height:2px;width:100%;margin-top:-.5px;transform:scaleX(0);transform-origin:0 50%;background:linear-gradient(90deg,transparent,#fff);box-shadow:0 0 10px #fff;will-change:transform}
+
+header{position:fixed;z-index:20;inset:0 0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:calc(env(safe-area-inset-top,0px) + 48px) var(--f) 0;pointer-events:none;animation:drop 1s .15s var(--out) both}
+header::before{content:"";position:absolute;z-index:-1;inset:0 0 -26px;background:linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.5) 55%,transparent);pointer-events:none}
+@keyframes drop{from{opacity:0;transform:translateY(-12px)}}
+header>*{pointer-events:auto}
+.snd{justify-self:start;display:flex;gap:10px;align-items:center;font-size:14px}
+.bars{display:flex;gap:2px;align-items:center;height:12px}
+.bars i{width:2px;height:100%;background:#fff;animation:eq 1s ease-in-out infinite}
+.bars i:nth-child(2){animation-delay:-.3s}.bars i:nth-child(3){animation-delay:-.6s}.bars i:nth-child(4){animation-delay:-.15s}
+@keyframes eq{50%{transform:scaleY(.3)}}
+.logo{position:relative;text-align:center;font-size:26px;line-height:1;padding:6px 18px;z-index:0}
+.logo::before{content:"";position:absolute;z-index:-1;left:50%;top:44%;width:min(330px,56vw);height:76px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(ellipse at 50% 60%,#000 38%,#262626 52%,#8a8a8a 60%,#d6d6d6 65%,#7a7a7a 70%,#262626 80%,#000 100%);box-shadow:0 14px 30px rgba(0,0,0,.8)}
+.logo b{display:block}
+.rt{justify-self:end;display:flex;gap:30px;align-items:center}
+.menu-b{display:flex;gap:10px;align-items:center;font-size:14px}
+.dots{width:12px;height:12px;background:radial-gradient(circle,#fff 1.3px,transparent 1.6px) 0 0/6px 6px;transition:transform .5s var(--out)}
+.menu-b[aria-expanded=true] .dots{transform:rotate(45deg)}
+.pill{background:#fff;color:#000;border-radius:10px;padding:14px 22px;font-size:14px;box-shadow:0 0 26px rgba(255,255,255,.55);display:inline-block;transition:transform .4s var(--out),box-shadow .4s}
+nav#mp{position:fixed;z-index:19;top:calc(env(safe-area-inset-top,0px) + 118px);right:var(--f);width:min(320px,calc(100vw - 2*var(--f)));padding:10px 22px;border-radius:18px;background:rgba(22,18,22,.78);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 60px rgba(0,0,0,.5);opacity:0;visibility:hidden;transform:translateY(-10px) scale(.98);transform-origin:100% 0;transition:opacity .35s,visibility .35s,transform .5s var(--out)}
+nav#mp.open{opacity:1;visibility:visible;transform:none}
+nav#mp a{display:block;font-size:30px;text-transform:uppercase;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.14);color:var(--mut);opacity:0;transform:translateY(-6px);transition:color .3s,opacity .35s,transform .5s var(--out)}
+nav#mp.open a{opacity:1;transform:none}
+nav#mp.open a:nth-child(2){transition-delay:0s,.05s,.05s}nav#mp.open a:nth-child(3){transition-delay:0s,.1s,.1s}nav#mp.open a:nth-child(4){transition-delay:0s,.15s,.15s}
+nav#mp a:last-child{border:0}nav#mp a:hover,nav#mp a[aria-current=true]{color:#fff}
+
+/* ===== hero : dossier, puis un projet par « étape » de scroll =====
+   --open : distance de scroll (en écrans) pour ouvrir le dossier
+   --seg  : distance de scroll consacrée à chaque projet
+   --end  : sortie de section */
+#projets{position:relative;--open:.9;--seg:.85;--end:.35;--n:5;height:calc(100vh*(1 + var(--open) + var(--seg)*var(--n) + var(--end)));--c:#6d5bd0}
+.pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:linear-gradient(#000 20%,#0b0b0d 42%,#1e1d22 66%,#38373d 86%,#47464c)}
+/* lueurs colorées (dessinées en petit puis agrandies : moins de pixels à peindre) : deux calques qui se relaient en fondu (opacité seule = fluide), au lieu d'animer la couleur de tout le décor */
+.glow{position:absolute;left:0;top:0;width:25%;height:25%;transform:scale(4);transform-origin:0 0;pointer-events:none;opacity:0;visibility:hidden;transition:opacity .8s ease,visibility 0s .8s;
+background:radial-gradient(40% 24% at 50% 60%,color-mix(in srgb,var(--g) 20%,transparent),transparent),
+radial-gradient(75% 42% at 50% 100%,color-mix(in srgb,var(--g) 72%,transparent),color-mix(in srgb,var(--g) 42%,transparent) 30%,color-mix(in srgb,var(--g) 16%,transparent) 58%,color-mix(in srgb,var(--g) 4%,transparent) 80%,transparent)}
+.glow.on{opacity:1;visibility:visible;transition:opacity .8s ease}
+/* fondu au noir en sortie de section : plus de cassure avec Compétences */
+.pin::after{content:"";position:absolute;inset:0;z-index:5;pointer-events:none;background:linear-gradient(transparent 45%,#000);opacity:var(--e,0)}
+.folder{--W:min(380px,78vw,46vh);--H:calc(var(--W)*.68);--fx:-22vw;--fy:2vh;--fs:.1;position:absolute;left:50%;top:46%;width:var(--W);height:var(--H);transform:translate(-50%,-50%);translate:calc(var(--q,0)*var(--fx)) calc(var(--q,0)*var(--fy));scale:calc(1 - var(--q,0)*var(--fs));perspective:1100px;animation:rise 1.4s var(--out) both}
+@keyframes rise{from{opacity:0;transform:translate(-50%,-30%) scale(.92)}}
+.pod{position:absolute;z-index:0;left:50%;bottom:-42px;width:150%;height:84px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(ellipse at 50% 40%,#2c2832 25%,#151219 55%,#0a090c 80%);border:1px solid rgba(255,255,255,.22);box-shadow:0 0 50px color-mix(in srgb,var(--c) calc(var(--p,0)*70% + 20%),transparent),inset 0 1px 0 rgba(255,255,255,.12);transition:box-shadow .6s}
+.fback{position:absolute;z-index:1;inset:0;border-radius:6px 14px 14px 14px;cursor:pointer;background:linear-gradient(145deg,#3a3a42,#18181d 45%,#101014 65%,#1d1d22);border:1px solid rgba(255,255,255,.2)}
+.fback::before{content:"";position:absolute;left:-1px;bottom:100%;width:40%;height:calc(var(--H)*.11);border-radius:12px 12px 0 0;background:linear-gradient(#4a4a54,#2c2c34);border:1px solid rgba(255,255,255,.2);border-bottom:0}
+.docs{position:absolute;z-index:2;inset:0;pointer-events:none}
+.open .docs{pointer-events:auto}
+.doc{--w:min(170px,calc(var(--W)*.46));position:absolute;left:50%;top:18%;width:var(--w);height:calc(var(--w)*1.28);transform-origin:50% 100%;border-radius:10px;text-align:left;padding:0;overflow:hidden;will-change:transform,opacity;
+background:linear-gradient(160deg,rgba(255,255,255,.14),rgba(255,255,255,.04) 35%,transparent 60%),linear-gradient(#16161c,#0c0c10);border:1px solid color-mix(in srgb,var(--c) 70%,#fff 10%);box-shadow:0 18px 34px rgba(0,0,0,.55),0 0 28px color-mix(in srgb,var(--c) 35%,transparent);transition:box-shadow .5s}
+.doc .bar{display:block;padding:8px 10px;font-size:11px;font-weight:700;background:var(--c);color:#000;filter:brightness(1.35);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.doc .nm{display:block;margin:16px 10px 12px;font-size:calc(var(--w)*.11)}
+/* carte « petit dossier » */
+.doc.fold{background:linear-gradient(160deg,rgba(255,255,255,.16),rgba(255,255,255,.04) 35%,transparent 60%),linear-gradient(color-mix(in srgb,var(--c) 26%,#16161c),#0c0c10)}
+.doc.fold .bar{border-radius:0 8px 0 0}
+.sheets{display:grid;gap:6px;margin:0 10px}
+.sheets i{display:block;font-style:normal;font-size:calc(var(--w)*.065);font-weight:600;letter-spacing:0;text-transform:none;font-stretch:100%;padding:5px 8px;border-radius:5px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:background-color .4s,color .4s,border-color .4s}
+.sheets i.on{background:color-mix(in srgb,var(--c) 70%,#fff);color:#000;border-color:transparent}
+/* onglets des sous-projets dans la fiche */
+.subs{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.subs[hidden]{display:none}
+.subs button{font-size:12px;padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.25);color:var(--mut);transition:background-color .3s,color .3s,border-color .3s}
+.subs button[aria-current=true]{background:#fff;color:#000;border-color:#fff}
+@media(hover:hover){.subs button:hover{border-color:#fff;color:#fff}.subs button[aria-current=true]:hover{color:#000}}
+.doc .ln{display:block;height:56px;margin:0 10px;background:repeating-linear-gradient(transparent 0 6px,rgba(255,255,255,.2) 6px 8px);-webkit-mask-image:linear-gradient(90deg,#000 70%,transparent);mask-image:linear-gradient(90deg,#000 70%,transparent)}
+.ffront{position:absolute;z-index:3;left:0;right:0;bottom:0;height:74%;border-radius:6px 14px 14px 14px;text-align:left;padding:0 0 14px 18px;display:flex;align-items:flex-end;transform-origin:50% 100%;transform:rotateX(calc(var(--p,0)*-58deg));will-change:transform;transition:filter .4s;
+background:linear-gradient(160deg,rgba(255,255,255,.26),rgba(255,255,255,.06) 28%,rgba(255,255,255,0) 50%,rgba(0,0,0,.35)),linear-gradient(#2e2e36,#16161b 60%,#0b0b0f);border:1px solid rgba(255,255,255,.3);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 -6px 40px color-mix(in srgb,var(--c) calc(var(--p,0)*55%),transparent)}
+.ffront span{font-size:clamp(20px,3vw,30px);opacity:calc(1 - var(--p,0)*1.3)}
+
+/* intro (dossier fermé) */
+.info{position:absolute;z-index:6;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 46px);width:min(760px,calc(100% - 2*var(--f)));text-align:center}
+.info h2{font-size:clamp(38px,7vw,70px)}
+.info p{margin:12px auto 0;font-size:16px;line-height:1.45;color:var(--mut);max-width:46ch}
+.hint{margin-top:16px;font-size:13px;color:var(--mut);text-transform:uppercase}
+
+/* fiche détaillée du projet actif */
+.detail{position:absolute;z-index:6;right:var(--f);top:50%;width:min(480px,36vw);transform:translateY(-50%);translate:0 calc((1 - var(--q,0))*28px);opacity:0;pointer-events:none}
+.open .detail{pointer-events:auto}
+.kick{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.kick b{font-weight:600;color:#fff;letter-spacing:.06em}
+.kick #pn{font-variant-numeric:tabular-nums;color:#fff}
+.detail h2{margin-top:14px;font-size:clamp(34px,3.8vw,58px)}
+.detail .pd{margin-top:16px;font-size:16px;line-height:1.5;color:rgba(255,255,255,.78)}
+.pk{margin-top:18px;list-style:none;display:grid;gap:10px}.pk[hidden]{display:none}
+.pk li{position:relative;padding-left:22px;font-size:14px;line-height:1.45;color:var(--mut)}
+.pk li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:2px;background:var(--c);box-shadow:0 0 10px var(--c);filter:brightness(1.4)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chips span{font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid color-mix(in srgb,var(--c) 55%,rgba(255,255,255,.2));background:color-mix(in srgb,var(--c) 14%,transparent)}
+.plink{display:inline-block;margin-top:18px;font-size:13px;border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:2px}.plink[hidden]{display:none}
+@media(hover:hover){.plink:hover{border-color:#fff}}
+.steps{display:flex;gap:6px;margin-top:22px}
+.steps i{position:relative;flex:0 0 26px;}.steps i.sub{margin-left:-3px}.steps i{height:3px;border-radius:2px;background:rgba(255,255,255,.18);overflow:hidden}
+.steps i::after{content:"";position:absolute;inset:0;background:#fff;transform-origin:0 50%;transform:scaleX(var(--s,0))}
+.detail>:not(.steps):not(.subs){transition:opacity .25s ease,transform .5s var(--out)}
+.detail>:nth-child(2){transition-delay:.03s}.detail>:nth-child(3){transition-delay:.06s}.detail>:nth-child(4){transition-delay:.09s}.detail>:nth-child(5){transition-delay:.12s}.detail>:nth-child(6){transition-delay:.15s}
+.detail.sw>:not(.steps):not(.subs){opacity:0;transform:translateY(12px);transition-delay:0s}
+
+/* écrans étroits : le dossier remonte et la fiche s'affiche dessous */
+@media(max-width:999px){
+.folder{--fx:0px;--fy:-17vh;--fs:.36}
+.detail{right:auto;left:50%;top:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 34px);width:min(620px,calc(100% - 2*var(--f)));transform:translateX(-50%);text-align:center}
+.kick,.chips,.steps,.subs{justify-content:center}
+.detail h2{margin-top:10px;font-size:clamp(26px,7vw,46px)}
+.detail .pd{margin-top:10px;font-size:14px;line-height:1.45}
+.pk{margin:12px auto 0;max-width:46ch;text-align:left;gap:6px}
+.pk li{font-size:13px}
+.chips{margin-top:12px;gap:6px}.chips span{font-size:11px;padding:5px 9px}
+.plink{margin-top:12px}
+.steps{margin-top:14px}
+}
+
+/* ===== compétences ===== */
+#competences{position:relative;min-height:100svh;overflow:hidden;display:grid;grid-template-columns:1fr minmax(240px,400px) 1fr;gap:var(--f);align-items:center;padding:140px var(--f) 0;--c:#2fa37c;transition:--c .7s;
+background:radial-gradient(70% 40% at 50% 60%,color-mix(in srgb,var(--c) 58%,#000),color-mix(in srgb,var(--c) 34%,transparent) 30%,color-mix(in srgb,var(--c) 12%,transparent) 62%,transparent),
+radial-gradient(35% 30% at 85% 30%,color-mix(in srgb,var(--c) 10%,transparent),transparent),#000}
+.tag{display:inline-flex;font-size:13px;margin-bottom:22px}
+.tag u{background:#fff;color:#000;padding:5px 9px;text-decoration:line-through}
+.tag s{background:var(--c);color:#000;padding:5px 8px;text-decoration:none;filter:brightness(1.5)}
+#competences h2{font-size:clamp(40px,5.6vw,72px)}
+#competences .txt p{margin-top:22px;font-size:19px;line-height:1.5;max-width:36ch}
+#competences .txt>*,.tc>small,.tb span{transition:opacity .25s ease,transform .45s var(--out)}
+#competences .txt>:nth-child(2){transition-delay:.04s}#competences .txt>:nth-child(3){transition-delay:.08s}
+#competences.sw .txt>*,#competences.sw .tc>small,#competences.sw .tb span{opacity:0;transform:translateY(10px);transition-delay:0s}
+.term{align-self:end;height:min(78vh,740px);border-radius:18px 18px 0 0;transform:rotate(3deg) translateY(6%);background:linear-gradient(rgba(14,17,17,.9),rgba(6,8,8,.84));border:1px solid color-mix(in srgb,var(--c) 55%,transparent);border-bottom:0;box-shadow:0 0 70px color-mix(in srgb,var(--c) 45%,transparent),inset 0 1px 0 rgba(255,255,255,.08);-webkit-mask-image:linear-gradient(#000 62%,transparent);mask-image:linear-gradient(#000 62%,transparent)}
+.tb{display:flex;gap:7px;align-items:center;height:40px;padding:0 16px;border-bottom:1px solid rgba(255,255,255,.14);font-size:12px;color:var(--mut)}
+.tb i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3)}.tb span{margin-left:10px}
+.tc{padding:30px 24px}
+.pr{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;color:var(--mut);margin-bottom:26px}
+.term li{list-style:none;font-size:clamp(26px,3vw,38px);margin-bottom:22px;color:color-mix(in srgb,var(--c) 55%,#fff);text-shadow:0 0 22px var(--c);animation:type .6s var(--out) both;animation-delay:calc(var(--i,0)*90ms + .12s)}
+@keyframes type{from{opacity:0;transform:translateX(-16px);filter:blur(4px)}}
+.term small{display:block;margin-top:30px;font-size:13px;line-height:1.4;color:var(--mut);font-weight:600}
+.ico{justify-self:end;display:flex;flex-direction:column;gap:22px;align-self:center}
+.ico button{width:60px;height:60px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.04);font-weight:800;font-size:15px;transition:background-color .5s,border-color .4s,box-shadow .5s,transform .4s var(--out)}
+.ico button[aria-pressed=true]{background:var(--c);border-color:#fff;box-shadow:0 0 28px var(--c)}
+
+/* ===== CV ===== */
+#cv{position:relative;padding:170px var(--f) 150px;background:radial-gradient(45% 45% at 12% 40%,rgba(109,91,208,.34),rgba(109,91,208,.14) 40%,rgba(109,91,208,.03) 72%,transparent),radial-gradient(38% 40% at 90% 60%,rgba(47,163,124,.13),rgba(47,163,124,.04) 55%,transparent),#000}
+.cv{max-width:1180px;margin:auto}
+.cv-h{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(24px,5vw,80px);align-items:end}
+.cv-h h2{font-size:clamp(64px,11vw,150px)}
+.cv-pitch{font-size:clamp(17px,1.6vw,21px);line-height:1.5;max-width:44ch}
+.cv-act{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;margin-top:22px}
+.cv-act button.pill{font-weight:500}
+.ghost{font-size:14px;border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:2px}
+@media(hover:hover){.ghost:hover{border-color:#fff}}
+.cv-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(30px,6vw,110px);margin-top:clamp(50px,7vw,90px)}
+.cv-col{border-left:1px solid;border-image:linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.04)) 1;padding-left:30px}
+.cv-col h3{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);font-weight:600;margin-bottom:22px}
+.cv-col h3:not(:first-child){margin-top:40px}
+.tl{list-style:none;display:grid;gap:30px}
+.tl li{position:relative;display:grid;gap:4px}
+.tl li::before{content:"";position:absolute;left:-35px;top:6px;width:9px;height:9px;border-radius:50%;background:#000;border:1px solid #fff;box-shadow:0 0 12px rgba(255,255,255,.5)}
+.tl li.now::before{background:#fff}
+.tl time{font-size:13px;color:var(--mut);font-variant-numeric:tabular-nums}
+.tl b{font-size:21px;font-weight:700}
+.tl span{color:var(--mut);line-height:1.55;font-size:16px;max-width:46ch}
+.sk{display:grid;gap:18px}
+.sk dt{font-size:15px;font-weight:700;margin-bottom:8px}
+.sk dd{display:flex;flex-wrap:wrap;gap:7px}
+.sk dd span{font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.05)}
+.facts{list-style:none;display:grid;gap:8px;color:var(--mut);font-size:15px;line-height:1.5}
+.facts b{color:#fff;font-weight:600}
+.cv-print{display:none}
+
+#contact{min-height:90svh;display:grid;place-items:center;text-align:center;padding:150px var(--f) 60px;background:radial-gradient(62% 48% at 50% 100%,rgba(255,95,162,.42),rgba(205,110,180,.3) 22%,rgba(63,177,201,.2) 48%,rgba(63,177,201,.06) 72%,transparent),#000}
+#contact h2{font-size:clamp(30px,10vw,128px)}
+#contact p{margin:26px auto 34px;color:var(--mut);font-size:18px;max-width:42ch;line-height:1.5}
+.lk{display:flex;gap:26px;justify-content:center;margin-top:30px;font-size:15px}
+.lk a{position:relative;border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:3px}
+.lk a::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:#fff;transform:scaleX(0);transform-origin:0 50%;transition:transform .45s var(--out)}
+footer{position:relative;padding:22px var(--f) 34px;font-size:13px;color:var(--mut);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,#6c7ae0,#3fb1c9,#e8b64a,#ff5fa2)}
+
+/* apparition au scroll */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--out),transform 1.1s var(--out);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+
+@media(hover:hover){
+.pill:hover{transform:translateY(-2px);box-shadow:0 0 40px rgba(255,255,255,.85)}
+.lk a:hover::after{transform:scaleX(1)}
+.ico button:hover{border-color:rgba(255,255,255,.85);transform:scale(1.07)}
+.menu-b:hover .dots{transform:rotate(90deg)}
+#projets:not(.open) .ffront:hover{filter:brightness(1.18)}
+}
+
+.still *,.still *::before,.still *::after{animation:none!important;transition:none!important}
+.still .rv{opacity:1!important;transform:none!important}
+
+@media(max-width:760px){
+#projets{--open:.8;--seg:.75}
+header{padding-top:calc(env(safe-area-inset-top,0px) + 40px)}.rt{gap:14px}.pill{padding:11px 14px}.logo{font-size:20px}
+.logo::before{width:min(300px,44vw);height:64px}
+.side-l{display:none}.br.a,.br.b{top:112px}
+nav#mp{top:calc(env(safe-area-inset-top,0px) + 100px)}nav#mp a{font-size:24px;padding:14px 0}
+#competences{grid-template-columns:1fr;gap:26px;padding-top:130px;align-items:start}
+.term{height:360px;width:min(250px,66vw);justify-self:center}
+.ico{flex-direction:row;justify-self:center;order:2;gap:16px}.ico button{width:52px;height:52px}
+#cv{padding:140px var(--f) 110px}.cv-h,.cv-grid{grid-template-columns:minmax(0,1fr)}.cv-h{gap:14px}
+}
+/* écrans peu hauts : le dossier remonte et rétrécit pour laisser la place à la fiche projet */
+@media(max-width:999px) and (max-height:720px){.folder{--fs:.46;--fy:-20vh}.detail h2{font-size:24px}.detail .pd{font-size:13px;margin-top:8px}.pk{gap:3px;margin-top:8px}.pk li{font-size:12px;line-height:1.35}.chips{margin-top:8px}.plink{margin-top:8px}.steps{margin-top:10px}.detail{bottom:calc(env(safe-area-inset-bottom,0px) + 26px)}}
+/* sur petit écran, le bouton Contact reste accessible via le menu */
+@media(max-width:700px){header .pill{display:none}}
+/* impression / « Télécharger en PDF » : seule la section CV, sur fond blanc */
+@media print{
+@page{size:A4;margin:16mm 15mm}
+:root{color-scheme:light}html,body{background:#fff!important;color:#111}
+body>*:not(main),main>*:not(#cv){display:none!important}
+#cv{padding:0 3mm;background:none}
+#cv *{color:#111!important;text-shadow:none!important;box-shadow:none!important}
+.rv{opacity:1!important;transform:none!important}
+.cv-h{grid-template-columns:1fr;gap:6px}
+.cv-h h2{font-size:44px}
+.cv-print{display:block;font-size:12px;margin-bottom:10px}.cv-print b{display:block;font-size:20px;margin-bottom:4px}
+.cv-pitch{font-size:13px;max-width:none}
+.cv-act{display:none}
+.cv-grid{margin-top:26px;gap:28px}
+.cv-col{border-image:none;border-left:1px solid #bbb;padding-left:18px}
+.cv-col h3{color:#555!important;margin-bottom:12px;font-size:10px}
+.cv-col h3:not(:first-child){margin-top:22px}
+.tl{gap:14px}.tl b{font-size:14px}.tl span,.facts{font-size:11.5px}.tl time{font-size:10.5px}
+.tl li::before{left:-22px;top:4px;width:7px;height:7px;background:#fff;border-color:#111}.tl li.now::before{background:#111}
+.sk{gap:10px}.sk dt{font-size:11.5px;margin-bottom:5px}.sk dd span{font-size:10px;padding:3px 7px;border-color:#bbb;background:none}
+}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="pline"><div class="pfill" id="pf"></div></div>
+<i class="br a"></i><i class="br b"></i><i class="br c"></i><i class="br d"></i>
+<div class="side-l" aria-hidden="true">BTS SIO · OPTION SLAM · 2E ANNÉE</div>
+
+<header>
+  <button class="snd" id="anim" aria-pressed="true" aria-label="Activer ou couper les animations"><span id="onoff">ON</span><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button>
+  <a class="logo disp" href="#projets" aria-label="Girard Lévy, accueil"><b>Girard</b><b>Lévy</b></a>
+  <div class="rt">
+    <button class="menu-b" id="mb" aria-expanded="false" aria-controls="mp"><span class="dots" aria-hidden="true"></span>MENU</button>
+    <a class="pill" href="#contact">CONTACT</a>
+  </div>
+</header>
+<nav id="mp" aria-label="Menu principal">
+  <a href="#projets">Projets</a><a href="#competences">Compétences</a><a href="#cv">CV</a><a href="#contact">Contact</a>
+</nav>
+
+<main>
+<section id="projets" aria-label="Projets">
+  <div class="pin" id="pin">
+    <h1 class="sr">Girard Lévy — portfolio BTS SIO option SLAM</h1>
+    <div class="glow on" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
+    <div class="folder" id="folder">
+      <div class="pod" aria-hidden="true"></div>
+      <div class="fback" id="fback" aria-hidden="true"></div>
+      <div class="docs" id="docs"></div>
+      <button class="ffront disp" id="ffront" aria-expanded="false" aria-label="Ouvrir ou fermer le dossier Projets"><span>Projets</span></button>
+    </div>
+    <div class="info" id="ia">
+      <h2 class="disp">Portfolio</h2>
+      <p>BTS SIO option SLAM, 2e année. Lycée Marie Curie, Tarbes.</p>
+      <p class="hint">Clique sur le dossier ou scrolle pour l'ouvrir</p>
+    </div>
+    <article class="detail" id="ib" aria-live="polite">
+      <p class="kick"><span><span id="pn">01</span> / <span id="pc">05</span></span><b id="pr"></b></p>
+      <div class="subs" id="sb" hidden></div>
+      <h2 class="disp" id="pt"></h2>
+      <p class="pd" id="pd"></p>
+      <ul class="pk" id="pk"></ul>
+      <div class="chips" id="ps"></div>
+      <a class="plink" id="pu" target="_blank" rel="noopener" hidden>Voir le code sur GitHub ↗</a>
+      <div class="steps" id="st" aria-hidden="true"></div>
+    </article>
+  </div>
+</section>
+
+<section id="competences" aria-label="Compétences">
+  <div class="txt rv">
+    <div class="tag"><s aria-hidden="true">×</s><u id="ctag"></u></div>
+    <h2 class="disp" id="ch"></h2>
+    <p id="cp"></p>
+  </div>
+  <div class="term" aria-live="polite">
+    <div class="tb"><i></i><i></i><i></i><span id="tf"></span></div>
+    <div class="tc"><p class="pr">› show --stack</p><ul id="cl" class="disp"></ul><small id="cs"></small></div>
+  </div>
+  <div class="ico rv" id="ico" role="group" aria-label="Domaines de compétences" style="--d:.15s"></div>
+</section>
+
+<section id="cv" aria-label="CV">
+  <div class="cv">
+    <div class="cv-h rv">
+      <h2 class="disp">CV</h2>
+      <div>
+        <p class="cv-print"><b>Girard Lévy</b><span data-cv="email"></span> · <span data-cv="github"></span> · <span data-cv="linkedin"></span></p>
+        <p class="cv-pitch">Étudiant en 2e année de BTS SIO option SLAM. Je développe des applications web et des outils pour Windows, du front-end SvelteKit aux scripts Python. Ouvert aux stages et à l'alternance.</p>
+        <div class="cv-act"><button class="pill" id="cvprint" type="button">Télécharger en PDF</button><a class="ghost" href="#contact">Me contacter</a></div>
+      </div>
+    </div>
+    <div class="cv-grid">
+      <div class="cv-col rv">
+        <h3>Parcours</h3>
+        <ol class="tl">
+          <li class="now"><time>2025 – 2027</time><b>BTS SIO, option SLAM</b><span>Lycée Marie Curie, Tarbes · 2e année en cours. Solutions logicielles et applications métiers : concevoir, développer et maintenir des applications pour les organisations.</span></li>
+          <li><time>2026</time><b>Stage · CodeFilao</b><span>Agence de développement web, Bergerac. Interfaces SvelteKit, TypeScript et Vite sur des projets clients.</span></li>
+          <li><time>2024</time><b>Bac STI2D</b><span>Sciences et technologies de l'industrie et du développement durable · Bergerac</span></li>
+        </ol>
+      </div>
+      <div class="cv-col rv" style="--d:.12s">
+        <h3>Compétences</h3>
+        <dl class="sk" id="sk"></dl>
+        <h3>En plus</h3>
+        <ul class="facts">
+          <li><b>Permis :</b> AM</li>
+          <li><b>Centres d'intérêt :</b> informatique, jeux vidéo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" aria-label="Contact">
+  <div>
+    <h2 class="disp rv">On travaille<br>ensemble&nbsp;?</h2>
+    <p class="rv" style="--d:.1s">Stage, alternance ou simple question sur un de mes projets : écris-moi, je réponds vite.</p>
+    <div class="rv" style="--d:.2s"><a class="pill" id="mail" href="#">Envoyer un mail</a></div>
+    <div class="lk rv" style="--d:.28s"><a id="gh" href="#" target="_blank" rel="noopener">GitHub</a><a id="li" href="#" target="_blank" rel="noopener">LinkedIn</a></div>
+  </div>
+</section>
+</main>
+<footer><span>© 2026 Girard Lévy</span><span>Portfolio BTS SIO · option SLAM</span></footer>
+
+<script>
+/* ===== À MODIFIER ===== */
+const CFG={email:"levygirard@gmail.com",github:"https://github.com/levygrd",linkedin:"https://www.linkedin.com/in/l%C3%A9vy-girard-789843323/"};
+/* Projets : f = nom du fichier sur la carte, l = libellé de la carte, t = titre, r = contexte,
+   d = description, k = points clés, s = technos (séparées par « · »), u = lien (optionnel), ul = texte du lien, c = couleur,
+   sub = sous-projets (la carte devient un petit dossier) */
+const P=[
+ {f:"portfolio.html",l:"Portfolio",t:"Ce portfolio",r:"Projet personnel",s:"HTML · CSS · JavaScript",d:"Ce site : la vitrine de mes projets de BTS SIO, dessinée comme un bureau d'ordinateur.",
+  k:["Animations pilotées par le scroll, sans aucune librairie","Responsive, utilisable au clavier, option pour couper les animations","Tout le contenu se modifie depuis un seul bloc de données"],c:"#c2418f"},
+ {f:"sony_api.py",l:"Stream",t:"Sony Liveview Webcam",r:"Application Windows",s:"Python · Flask · JavaScript · PyInstaller",d:"Pilote un appareil photo Sony en Wi-Fi et transforme son image en webcam pour Discord, Zoom ou OBS.",
+  k:["Connexion en un clic via la Camera Remote API de Sony (SSDP, JSON-RPC)","Zoom, photo, vidéo, retardateur et galerie de la carte SD à distance","Installeur Windows, icône dans la barre système et mise à jour automatique"],u:"https://github.com/levygrd/sony-liveview-webcam",c:"#2fa37c"},
+ {f:"codefilao/",l:"CodeFilao",t:"Stage chez CodeFilao",r:"Stage · Bergerac",s:"SvelteKit · TypeScript · Vite",d:"Développement d'interfaces pendant mon stage à l'agence CodeFilao, à Bergerac.",c:"#6d5bd0",
+  /* petit dossier : un sous-projet par étape de scroll (l = nom court sur la carte) */
+  sub:[
+   {l:"Projet 1",t:"Projet de stage n°1",d:"À compléter : le besoin du client, ce que fait l'application et ta part du travail.",k:[],s:"SvelteKit · TypeScript · Vite"},
+   {l:"Projet 2",t:"Projet de stage n°2",d:"À compléter : le besoin du client, ce que fait l'application et ta part du travail.",k:[],s:"SvelteKit · TypeScript · Vite"}
+  ]},
+ {f:"ivideo-manager",l:"iVideo",t:"iPhone Video Manager",r:"Application Windows",s:"Python · CustomTkinter · pymobiledevice3",d:"Application pour trier, transférer et supprimer les vidéos d'un iPhone branché en USB, sans passer par l'explorateur Windows.",
+  k:["Accès direct au téléphone (AFC), chargement progressif de milliers de vidéos","Filtres par date, taille et format, transfert avec gestion des doublons","Retrouve aussi les vidéos d'apps comme Blackmagic Camera ou FiLMiC Pro"],u:"https://github.com/levygrd/iphone-video-manager",c:"#d9732b"},
+ {f:"parc-glpi.pdf",l:"GLPI",t:"Gestion de parc avec GLPI",r:"Projet de cours · BTS SIO",s:"GLPI · ITIL · Gestion des incidents",d:"Mise en place d'une gestion de parc et d'incidents avec GLPI, de l'inventaire jusqu'à la clôture d'un ticket.",
+  k:["Comparaison des démarches qualité : ITIL, COBIT, CMMI, ISO 9001 et ISO/IEC 20000","Inventaire du parc : postes, moniteurs et 149 logiciels recensés","Cycle complet d'un ticket : création par l'utilisateur, réponse du technicien, passage en Résolu"],u:"docs/gestion-parc-informatique-glpi.pdf",ul:"Lire le dossier (PDF) ↗",c:"#3b82d6"}
+];
+/* CV : compétences par catégorie */
+const SK=[
+ ["Développement web",["HTML","CSS","JavaScript","TypeScript","SvelteKit","Vite","PHP"]],
+ ["Applications & scripts",["Python","Flask","Java","CustomTkinter"]],
+ ["Outils",["Git","GitHub","GLPI","PyInstaller","Inno Setup"]]
+];
+const G=[
+ {b:"</>",f:"web.svelte",tag:"Page figée",h:"Front-end SvelteKit",p:"Je construis des interfaces rapides avec SvelteKit, TypeScript et Vite, utilisées en conditions réelles pendant mon stage.",i:["SvelteKit","TypeScript","Vite"],s:"Interfaces · composants · routage",c:"#2fa37c"},
+ {b:"{ }",f:"back.php",tag:"Code spaghetti",h:"Back-end & scripts",p:"PHP, Java et Python (Flask) pour la logique métier, les applications et les outils vus en cours et en projet.",i:["PHP","Java","Python"],s:"Applications · API · outils",c:"#9a63e0"},
+ {b:"#_",f:"reseau.sh",tag:"Réseau au hasard",h:"Systèmes & réseau",p:"Administration de serveurs et outils réseau abordés à travers les projets du BTS.",i:["Serveurs","Réseau","Admin"],s:"Configuration · services",c:"#d9732b"}
+];
+/* ====================== */
+const $=id=>document.getElementById(id),clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)),ease=x=>x*x*(3-2*x);
+const sec=$("projets"),pin=$("pin"),folder=$("folder"),still=()=>document.body.classList.contains("still");
+
+/* dossier puis projets : la position de scroll choisit l'étape affichée ; tout est amorti pour rester fluide.
+   Un projet avec « sub » (ex. CodeFilao) est un petit dossier : une étape de scroll par sous-projet. */
+const N=P.length,mid=Math.floor(N/2);
+const ST=[];P.forEach((x,i)=>x.sub?x.sub.forEach((_,j)=>ST.push({i,j})):ST.push({i,j:-1}));
+const NS=ST.length,first=i=>ST.findIndex(s=>s.i===i);
+let cur=0,sub=-1,stp=0,seg=-1,lock=-1,lockT=0,p=0,q=0,cf=mid,raf=0,last=0,H=0,gap=0,U=1,L={open:.9,seg:.85,end:.35},tt;
+const act=P.map((_,i)=>+(i===cur));
+sec.style.setProperty("--n",NS);
+$("pc").textContent=String(N).padStart(2,"0");
+const steps=ST.map(s=>{const i=document.createElement("i");if(s.j>0)i.className="sub";$("st").appendChild(i);return i});
+const FOLDER='<svg viewBox="0 0 16 12" width="13" height="10" aria-hidden="true" style="vertical-align:-1px;margin-right:5px"><path d="M1 2.2C1 1.5 1.5 1 2.2 1h3.6l1.5 1.6h6.5c.7 0 1.2.5 1.2 1.2v6c0 .7-.5 1.2-1.2 1.2H2.2C1.5 11 1 10.5 1 9.8z" fill="currentColor"/></svg>';
+const docs=P.map((x,i)=>{const b=document.createElement("button");b.className="doc disp"+(x.sub?" fold":"");b.style.setProperty("--c",x.c);b.setAttribute("aria-label",x.t);
+ b.innerHTML='<span class="bar" style="font-style:normal;text-transform:none;letter-spacing:0;font-stretch:100%;font-weight:700">'+(x.sub?FOLDER:"")+x.f+'</span><span class="nm">'+x.l+'</span>'+
+  (x.sub?'<span class="sheets">'+x.sub.map(s=>"<i></i>").join("")+"</span>":'<span class="ln"></span>');
+ if(x.sub)b.querySelectorAll(".sheets i").forEach((el,j)=>el.textContent=x.sub[j].l);
+ b.onclick=()=>{const s=first(i);go(s);toSeg(s)};b.onfocus=()=>{if(i!==cur)go(first(i))};b.onpointerenter=e=>{if(e.pointerType==="mouse"&&i!==cur)go(first(i))};$("docs").appendChild(b);return b});
+function measure(){const cs=getComputedStyle(sec);for(const k in L)L[k]=parseFloat(cs.getPropertyValue("--"+k))||L[k];
+ U=sec.offsetHeight/(1+L.open+L.seg*NS+L.end);H=folder.offsetHeight;const w=docs[0].offsetWidth;gap=Math.min(150,(innerWidth/2-w/2-14)/mid)}
+/* position dans la section, en « écrans » de scroll */
+function pos(){return -sec.getBoundingClientRect().top/U}
+function secTop(){return sec.getBoundingClientRect().top+scrollY}
+function toSeg(s){lock=s;lockT=performance.now();scrollTo({top:secTop()+(L.open+(s+.5)*L.seg)*U,behavior:still()?"auto":"smooth"})}
+function draw(){const e0=ease(p),c=mid+(cf-mid)*q;sec.style.setProperty("--p",e0.toFixed(4));sec.style.setProperty("--q",q.toFixed(4));
+ const g=gap*(1-.3*q);
+ docs.forEach((d,i)=>{const o=i-c,ao=Math.abs(o),a=act[i],e=ease(clamp((p-Math.abs(i-mid)*.06)/.75)),op=1-clamp(q*1.6)*clamp((ao-1.2)/.7);
+  d.style.transform=`translate(-50%,0) translate(${(o*g*e).toFixed(2)}px,${(-H*.62*e-ao*10*e-16*a*e).toFixed(2)}px) rotate(${(o*5*e+o).toFixed(3)}deg) scale(${(1+.1*a*e-.05*q*Math.min(ao,2)).toFixed(4)})`;
+  d.style.opacity=op.toFixed(3);d.style.visibility=op<.02?"hidden":"";d.style.zIndex=20-Math.round(ao*2);
+  d.style.filter=`brightness(${(1-.45*e*(1-a)).toFixed(3)})`;d.tabIndex=p>.6&&op>.5?0:-1});
+ const open=p>.6;sec.classList.toggle("open",open);$("ffront").setAttribute("aria-expanded",open);
+ $("ia").style.opacity=clamp(1-p*2.2);$("ib").style.opacity=clamp(q*2-1)}
+function tick(t){raf=0;const dt=last?Math.min(64,t-last):16;last=t;
+ const v=pos(),s=still(),k=s?1:1-Math.exp(-dt/85),kc=s?1:1-Math.exp(-dt/140),
+  tp=clamp(v/(L.open*.8)),tq=clamp((v-L.open*.5)/(L.open*.45)),sv=(v-L.open)/L.seg,si=clamp(Math.floor(sv),0,NS-1);
+ /* pendant un défilement automatique (clic sur une carte), on ne fait pas défiler les étapes intermédiaires */
+ if(si!==seg){seg=si;if(lock<0&&si!==stp)go(si)}
+ if(lock>=0&&(si===lock||t-lockT>1600)){lock=-1;if(si!==stp)go(si)}
+ steps.forEach((el,j)=>el.style.setProperty("--s",j<si?1:j>si?0:clamp(sv-si).toFixed(3)));
+ pin.style.setProperty("--e",clamp((v-L.open-L.seg*NS)/L.end).toFixed(3));
+ let mv=false;const ap=(x,t,f)=>{const n=x+(t-x)*f;if(Math.abs(t-n)<3e-4)return t;mv=true;return n};
+ p=ap(p,tp,k);q=ap(q,tq,k);cf=ap(cf,ST[seg].i,kc); /* l'éventail suit le scroll ; le survol ne fait que mettre une carte en avant */
+ act.forEach((a,i)=>{act[i]=ap(a,+(i===cur),kc)});
+ draw();if(mv)raf=requestAnimationFrame(tick);else last=0}
+function req(){if(!raf)raf=requestAnimationFrame(tick)}
+function show(x,i,j){const y=j>=0?x.sub[j]:x;
+ $("pn").textContent=String(i+1).padStart(2,"0");$("pr").textContent=(x.r||"")+(j>=0?" · projet "+(j+1)+"/"+x.sub.length:"");
+ const sb=$("sb");sb.innerHTML="";sb.hidden=!x.sub;
+ if(x.sub)x.sub.forEach((s,k)=>{const b=document.createElement("button");b.type="button";b.textContent=s.l;b.setAttribute("aria-current",k===j);b.onclick=()=>{const t=first(i)+k;go(t);toSeg(t)};sb.appendChild(b)});
+ $("pt").textContent=y.t;$("pd").textContent=y.d;
+ const ul=$("pk");ul.innerHTML="";(y.k||[]).forEach(t=>{const li=document.createElement("li");li.textContent=t;ul.appendChild(li)});ul.hidden=!(y.k&&y.k.length);
+ const ch=$("ps");ch.innerHTML="";(y.s||x.s).split("·").forEach(t=>{const sp=document.createElement("span");sp.textContent=t.trim();ch.appendChild(sp)});
+ const u=$("pu");u.hidden=!y.u;if(y.u){u.href=y.u;u.textContent=y.ul||"Voir le code sur GitHub ↗"}}
+function go(s,now){stp=clamp(s,0,NS-1);cur=ST[stp].i;sub=ST[stp].j;const x=P[cur],ib=$("ib"),i=cur,j=sub;
+ sec.style.setProperty("--c",x.c);tint(x.c,now);req();
+ docs.forEach((d,k)=>d.querySelectorAll(".sheets i").forEach((el,m)=>el.classList.toggle("on",k===i&&m===j)));
+ const put=()=>{show(x,i,j);ib.classList.remove("sw")};
+ clearTimeout(tt);if(now||still())return put();ib.classList.add("sw");tt=setTimeout(put,220)}
+const glows=[...document.querySelectorAll(".glow")];let gi=0;
+function tint(c,now){if(glows[gi].style.getPropertyValue("--g")===c)return;
+ if(now){glows[gi].style.setProperty("--g",c);return}
+ gi=1-gi;glows[gi].style.setProperty("--g",c);glows[gi].classList.add("on");glows[1-gi].classList.remove("on")}
+function toggle(){p>.5?scrollTo({top:secTop(),behavior:still()?"auto":"smooth"}):toSeg(0)}
+$("ffront").onclick=toggle;$("fback").onclick=toggle;
+addEventListener("keydown",e=>{if(p>.6&&(e.key==="ArrowLeft"||e.key==="ArrowRight")){const r=sec.getBoundingClientRect();if(r.top<=0&&r.bottom>=innerHeight*.5){e.preventDefault();const s=clamp(stp+(e.key==="ArrowRight"?1:-1),0,NS-1);go(s);toSeg(s)}}});
+addEventListener("resize",()=>{measure();req()});
+(function(){measure();const v=pos();seg=clamp(Math.floor((v-L.open)/L.seg),0,NS-1);go(seg,true);cf=ST[seg].i;act.forEach((_,i)=>act[i]=+(i===cur));
+ p=clamp(v/(L.open*.8));q=clamp((v-L.open*.5)/(L.open*.45));draw();req()})();
+if(document.fonts)document.fonts.ready.then(()=>{measure();req()});
+
+/* compétences */
+const ico=$("ico"),cs=$("competences");let ct;
+G.forEach((g,i)=>{const b=document.createElement("button");b.textContent=g.b;b.setAttribute("aria-label",g.h);b.onclick=()=>sk(i);ico.appendChild(b)});
+function sk(i,now){const g=G[i];cs.style.setProperty("--c",g.c);[...ico.children].forEach((b,j)=>b.setAttribute("aria-pressed",j==i));
+ const put=()=>{$("ctag").textContent=g.tag;$("ch").textContent=g.h;$("cp").textContent=g.p;$("tf").textContent=g.f;
+  $("cl").innerHTML=g.i.map((x,k)=>'<li style="--i:'+k+'">'+x+"</li>").join("");$("cs").textContent=g.s;cs.classList.remove("sw")};
+ clearTimeout(ct);if(now||still())return put();cs.classList.add("sw");ct=setTimeout(put,200)}
+sk(0,true);
+
+/* menu, animations, section active, progression */
+const mb=$("mb"),mp=$("mp");
+function tm(o){mp.classList.toggle("open",o);mb.setAttribute("aria-expanded",o)}
+mb.onclick=e=>{e.stopPropagation();tm(!mp.classList.contains("open"))};
+mp.onclick=()=>tm(false);document.addEventListener("click",()=>tm(false));
+addEventListener("keydown",e=>{if(e.key==="Escape")tm(false)});
+/* tous les liens internes (menu, logo, bouton Contact) défilent en douceur */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{const h=a.getAttribute("href"),t=h.length>1&&document.querySelector(h);if(!t)return;
+ a.addEventListener("click",e=>{e.preventDefault();scrollTo({top:t.getBoundingClientRect().top+scrollY,behavior:still()?"auto":"smooth"})})});
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting)mp.querySelectorAll("a").forEach(a=>a.setAttribute("aria-current",a.getAttribute("href")==="#"+en.target.id))}),{rootMargin:"-45% 0px -45% 0px"});
+document.querySelectorAll("main section").forEach(s=>io.observe(s));
+const rv=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add("in");rv.unobserve(en.target)}}),{threshold:.15,rootMargin:"0px 0px -6% 0px"});
+document.querySelectorAll(".rv").forEach(el=>rv.observe(el));
+/* les coins du cadre s'effacent quand le pied de page arrive, pour ne pas chevaucher son texte */
+new IntersectionObserver(([en])=>document.body.classList.toggle("end",en.isIntersecting)).observe(document.querySelector("footer"));
+const an=$("anim");
+function setAnim(on){document.body.classList.toggle("still",!on);an.setAttribute("aria-pressed",on);$("onoff").textContent=on?"ON":"OFF"}
+an.onclick=()=>setAnim(an.getAttribute("aria-pressed")!=="true");
+if(matchMedia("(prefers-reduced-motion:reduce)").matches)setAnim(false);
+let pq=0;
+addEventListener("scroll",()=>{req();if(!pq)pq=requestAnimationFrame(()=>{pq=0;const m=document.documentElement.scrollHeight-innerHeight;$("pf").style.transform="scaleX("+(m>0?scrollY/m:0).toFixed(4)+")"})},{passive:true});
+/* CV */
+SK.forEach(([t,l])=>{const dt=document.createElement("dt"),dd=document.createElement("dd");dt.textContent=t;l.forEach(x=>{const sp=document.createElement("span");sp.textContent=x;dd.appendChild(sp)});$("sk").append(dt,dd)});
+document.querySelectorAll("[data-cv]").forEach(el=>{const v=CFG[el.dataset.cv];el.textContent=el.dataset.cv==="email"?v:v.replace(/^https:\/\/(www\.)?/,"").replace(/%C3%A9/g,"é").replace(/\/$/,"")});
+$("cvprint").onclick=()=>print();
+$("mail").href="mailto:"+CFG.email;$("gh").href=CFG.github;$("li").href=CFG.linkedin;
+</script>
+</body>
+</html>
